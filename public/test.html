@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/public/salon/img/favicon.png">
+  <title>🧪 LHVC SAVIM · Mode test</title>
+  <link rel="stylesheet" href="/public/salon/style.css">
+  <style>
+    body { padding-bottom: 2rem; }
+    main { max-width: 1100px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: .9rem; align-items: start; }
+    .card h2 { font-size: 1.15rem; }
+    .qr svg { width: 220px; }
+    .row { display: flex; gap: .5rem; flex-wrap: wrap; } .row .btn { flex: 1; min-width: 140px; }
+    .check li { list-style: none; margin: .35rem 0; } .check { padding: 0; margin: 0; }
+    .check label { display: flex; gap: .6rem; align-items: flex-start; cursor: pointer; }
+    .check input { width: 1.25rem; height: 1.25rem; margin-top: .15rem; flex: 0 0 auto; }
+    .check li.done span { text-decoration: line-through; color: var(--muted); }
+    .log { font: .85rem ui-monospace, Consolas, monospace; max-height: 230px; overflow: auto; background: #f4efe6; border-radius: 10px; padding: .5rem .7rem; }
+    .big-n { font: 700 2rem var(--sans); color: var(--wine); }
+    .stats { display: flex; gap: 1.2rem; justify-content: center; text-align: center; }
+    code { background: #f0e9dd; padding: .05rem .3rem; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header class="topbar"><h1><img src="/public/salon/img/logo.jpg" alt="" class="logo-mini">🧪 Mode test · SAVIM Edition</h1></header>
+  <div class="testband">🧪 MODE TEST · tout ce qui se passe ici est rangé à part (server/data-test) : le vrai salon n'est jamais touché</div>
+  <main>
+    <div id="off" class="notice err hidden">Le serveur ne tourne pas en mode test. Ferme-le et relance <strong>LANCER_TEST_PC.bat</strong> (ou <code>node server.js --test</code>).</div>
+    <div class="grid">
+      <div class="card">
+        <h2>📱 1. Ton téléphone = un dégustateur</h2>
+        <p class="hint">Le téléphone doit être sur le <strong>même Wi-Fi que ce PC</strong> (ta box). Scanne avec l'appareil photo :</p>
+        <div class="qr" id="qr"></div>
+        <p class="hint" id="ips"></p>
+        <p class="hint">Rien ne s'ouvre ? Le pare-feu de Windows bloque Node.js : voir la partie « Si ça coince » du guide.</p>
+      </div>
+      <div class="card">
+        <h2>💻 2. Ce PC = un 2e dégustateur</h2>
+        <p class="hint">Ouvre l'appli dans une fenêtre étroite (ou F12 → icône téléphone pour l'afficher comme un mobile).</p>
+        <div class="row"><a class="btn" id="open-app" target="_blank">🥂 Ouvrir l'appli</a></div>
+        <p class="hint">Pour un 3e dégustateur sur le même PC : copie l'adresse dans une <strong>fenêtre de navigation privée</strong> (Ctrl+Maj+N) : elle a sa propre mémoire.</p>
+        <h2 style="margin-top:1rem">🎛️ Écran de l'hôte & résultats</h2>
+        <div class="row"><a class="btn ghost" href="/hote" target="_blank">📱 Écran de l'hôte</a><a class="btn gold" href="/resultats" target="_blank">🏆 Résultats</a></div>
+        <p class="hint">Code animateur : <strong id="pin">…</strong></p>
+      </div>
+      <div class="card">
+        <h2>📊 En direct</h2>
+        <div class="stats"><div><div class="big-n" id="n-m">0</div>dégustateurs</div><div><div class="big-n" id="n-v">0</div>notes reçues</div></div>
+        <h3>Derniers envois reçus</h3>
+        <div class="log" id="log">—</div>
+      </div>
+      <div class="card">
+        <h2>🤖 Faux dégustateurs</h2>
+        <p class="hint">Ajoute des copains virtuels qui ont noté des vins (souvent les mêmes que les tiens si tu passes par les premiers exposants d'Alsace, Bordeaux, Beaujolais ou Bourgogne), une bouteille commune, des ❤️, des degrés…
+          Pratique pour voir des classements remplis.</p>
+        <div class="row"><button class="btn ghost" data-bots="1">+1</button><button class="btn" data-bots="3">+3</button><button class="btn ghost" data-bots="6">+6</button></div>
+      </div>
+      <div class="card">
+        <h2>📡 Panne de réseau simulée</h2>
+        <p class="hint">Le serveur refuse les envois pendant un moment, comme si tu étais loin du partage. Note un vin sur le téléphone : la pastille devient 🟡. À la fin de la panne, l'envoi repart tout seul (≈15 s) et elle repasse au 🟢.</p>
+        <div class="row"><button class="btn" data-outage="60">Couper 1 min</button><button class="btn ghost" data-outage="180">3 min</button><button class="btn ghost" data-outage="0">Rétablir</button></div>
+        <p class="notice hidden" id="outage"></p>
+        <p class="hint">Test plus réaliste : coupe le Wi-Fi du téléphone (mode avion), note 2-3 vins, puis remets le Wi-Fi.</p>
+      </div>
+      <div class="card">
+        <h2>📎 Le retardataire (envoi par fichier)</h2>
+        <p class="hint">Télécharge le fichier de notes de « Robert », comme s'il te l'avait envoyé par WhatsApp, puis importe-le sur la page Résultats (📎 Importer des fichiers). Importe-le deux fois : ses notes ne doivent compter qu'une fois.</p>
+        <div class="row"><a class="btn ghost" href="/api/test/retardataire" download>⬇️ Fichier de Robert</a></div>
+      </div>
+      <div class="card">
+        <h2>✅ Le parcours de test (≈ 15 min)</h2>
+        <ul class="check" id="check"></ul>
+        <button class="btn ghost" id="uncheck">Tout décocher</button>
+      </div>
+      <div class="card">
+        <h2>🧹 Remise à zéro</h2>
+        <p class="hint">Efface toutes les notes de test reçues par le serveur. Sur chaque téléphone : ⚙️ Réglages → 🧹 Tout effacer (mémoire de test seulement).</p>
+        <button class="btn red" id="reset">🧹 Remettre le test à zéro</button>
+      </div>
+    </div>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="/public/salon/vendor/qrcode.js"></script>
+  <script>
+  (() => {
+    const $ = s => document.querySelector(s);
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const toast = (m, k = '') => { const t = $('#toast'); t.textContent = m; t.className = `toast show ${k}`; setTimeout(() => t.className = 'toast', 2600); };
+    const post = (url, body = {}) => fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(r => r.json());
+    const qrSvg = text => { qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8']; const q = qrcode(0, 'M'); q.addData(String(text), 'Byte'); q.make(); return q.createSvgTag({ cellSize: 4, margin: 2, scalable: true }); };
+
+    const STEPS = [
+      'PC : l\'appli s\'ouvre (💻 Ouvrir l\'appli), je donne un prénom (ex. « PC »).',
+      'Téléphone : je scanne le QR 📱, je donne un prénom. Le bandeau jaune « MODE TEST » est affiché.',
+      'Téléphone : 🥂 Je goûte → un exposant → un vin → une note → ✓. La pastille passe au 🟢 et « En direct » compte la note.',
+      'Téléphone : 📤 Faire goûter aux copains. PC : 🔢 Code d\'un vin avec le code affiché → le même vin s\'ouvre → je le note.',
+      'Téléphone : 🍾 Bouteille commune → choisir → noter avec un prix → montrer le QR. PC : noter la même bouteille (code ou QR).',
+      'Téléphone : ➕ un vin « pas dans la liste » chez un exposant sans cuvées, et je le note.',
+      '📡 Panne 1 min, puis je note 2 vins sur le téléphone : pastille 🟡. Après la panne, elle repasse au 🟢 toute seule.',
+      'Téléphone : je ferme l\'onglet, je le rouvre : mes notes sont toujours dans 📒 Mes notes.',
+      '📚 Apprendre : une fiche cépage, une fiche région. Depuis un vin, je touche un cépage → sa fiche.',
+      '🤖 +3 faux dégustateurs.',
+      '📎 Fichier de Robert → Résultats → Importer (2 fois : il ne compte qu\'une fois).',
+      '🏆 Résultats → code animateur → Lancer la révélation : je fais défiler toutes les diapos.',
+      '📤 Envoyer à l\'hôte → 📎 Envoyer le fichier : le partage (WhatsApp…) s\'ouvre sur le téléphone.',
+      '🧹 Remise à zéro du test, et 🧹 Tout effacer sur le téléphone.',
+    ];
+    const CK = 'lhvc_test_check';
+    let done = []; try { done = JSON.parse(localStorage.getItem(CK) || '[]'); } catch { done = []; }
+    function paintCheck() {
+      $('#check').innerHTML = STEPS.map((s, i) => `<li class="${done.includes(i) ? 'done' : ''}"><label><input type="checkbox" data-i="${i}" ${done.includes(i) ? 'checked' : ''}><span>${i + 1}. ${esc(s)}</span></label></li>`).join('');
+    }
+    $('#check').addEventListener('change', e => { const i = Number(e.target.dataset.i); done = e.target.checked ? [...done, i] : done.filter(x => x !== i); localStorage.setItem(CK, JSON.stringify(done)); paintCheck(); });
+    $('#uncheck').onclick = () => { done = []; localStorage.setItem(CK, '[]'); paintCheck(); };
+    paintCheck();
+
+    let lastApp = '';
+    async function poll() {
+      try {
+        const d = await fetch('/api/test/status', { cache: 'no-store' }).then(r => r.json());
+        if (!d.ok) { $('#off').classList.remove('hidden'); return; }
+        $('#off').classList.add('hidden');
+        if (d.appUrl !== lastApp) { lastApp = d.appUrl; $('#qr').innerHTML = `${qrSvg(d.appUrl)}<p><strong>${esc(d.appUrl.replace('http://', ''))}</strong></p>`; $('#open-app').href = `http://localhost:${d.port}/public/salon/?test=1`; }
+        $('#ips').textContent = d.hosts.length > 1 ? `Le QR ne marche pas ? Essaie une autre adresse de ce PC : ${d.hosts.map(h => h.ip).join(', ')} (port ${d.port}).` : '';
+        $('#pin').textContent = d.pin;
+        $('#n-m').textContent = d.membres; $('#n-v').textContent = d.notes;
+        $('#log').innerHTML = d.syncs.map(s => `${new Date(s.at).toLocaleTimeString('fr-FR')} · ${esc(s.name)} · ${{ wifi: '📶', fichier: '📎', bot: '🤖' }[s.source] || ''} +${s.added} / ${s.updated} modif.`).join('<br>') || '—';
+        const o = $('#outage'); o.classList.toggle('hidden', !d.outage); o.textContent = `📡 Réception coupée encore ${d.outage} s`;
+      } catch { $('#off').classList.remove('hidden'); $('#off').textContent = '📡 Serveur arrêté : relance LANCER_TEST_PC.bat'; }
+    }
+    document.addEventListener('click', async e => {
+      const b = e.target.closest('[data-bots]');
+      if (b) { const d = await post('/api/test/bots', { n: Number(b.dataset.bots) }); toast(d.ok ? `🤖 ${d.added.join(', ')}` : d.error, d.ok ? 'ok' : 'err'); poll(); }
+      const o = e.target.closest('[data-outage]');
+      if (o) { await post('/api/test/outage', { seconds: Number(o.dataset.outage) }); toast(o.dataset.outage === '0' ? '📶 Réception rétablie' : '📡 Réception coupée', 'ok'); poll(); }
+    });
+    $('#reset').onclick = async () => { if (!confirm('Effacer toutes les notes de test du serveur ?')) return; await post('/api/test/reset'); toast('🧹 Test remis à zéro', 'ok'); poll(); };
+    poll(); setInterval(poll, 2000);
+  })();
+  </script>
+</body>
+</html>

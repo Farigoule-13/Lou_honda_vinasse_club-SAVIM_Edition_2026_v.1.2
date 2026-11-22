@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LHVC · Réception des notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-bottom:1rem">
+  <header class="topbar"><h1><img src="img/logo.jpg" alt="" class="logo-mini">Réception chez l'hôte</h1></header>
+  <main><div class="card center" id="out"><p>📡 Envoi en cours…</p></div>
+    <button class="btn ghost" onclick="history.back()">↩ Revenir à mon appli</button></main>
+  <script>
+  /* Page ouverte depuis la version en ligne de l'appli : elle reçoit les notes dans l'adresse (#d=…)
+     et les remet au serveur de l'hôte. Rien n'est gardé dans ce navigateur. */
+  (async () => {
+    const out = document.getElementById('out');
+    const m = location.hash.match(/#d=([A-Za-z0-9_-]+)/);
+    history.replaceState(null, '', location.pathname);
+    if (!m) { out.innerHTML = '<p>Rien à recevoir. Ouvre cette page depuis « 📤 Envoyer à l\'hôte » dans l\'appli.</p>'; return; }
+    try {
+      const s = m[1].replace(/-/g, '+').replace(/_/g, '/');
+      const data = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(s), c => c.charCodeAt(0))));
+      const r = await fetch('/api/salon/sync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      const d = await r.json();
+      if (!d.ok) throw new Error(d.error || 'refusé');
+      out.innerHTML = `<p style="font-size:3rem;margin:.2rem">✅</p><p><strong>Merci ${String(data.member.name).replace(/[<>&]/g, '')} !</strong></p>
+        <p>L'hôte a maintenant <strong>${d.mine}</strong> de tes notes (${d.added} nouvelle${d.added > 1 ? 's' : ''}, ${d.updated} modifiée${d.updated > 1 ? 's' : ''}).</p>
+        <p class="hint">Tu peux revenir à ton appli. Si tu notes encore d'autres vins, renvoie-les de la même façon.</p>`;
+    } catch (e) {
+      out.innerHTML = `<p style="font-size:3rem;margin:.2rem">😕</p><p>Échec : ${String(e.message).replace(/[<>&]/g, '')}</p>
+        <p class="hint">Es-tu bien connecté au partage de connexion de l'hôte ? Sinon, utilise « 📎 Envoyer le fichier » dans l'appli.</p>`;
+    }
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+#138
+Tradition|blanc|Côtes du Rhône|-|-|-
+Agapé|blanc|Côtes du Rhône|-|-|-
+Les Frangins|rosé|Côtes du Rhône|-|-|-
+Lou Pitchoun|rouge|Côtes du Rhône|-|-|-
+Terre d'Histoire|-|Côtes du Rhône Villages Suze-la-Rousse|-|-|-
+Marie-Louise|rouge|Côtes du Rhône|-|-|-
+#148
+Côtes du Rhône blanc|blanc|Côtes du Rhône|-|-|-
+Côtes du Rhône Latour Bel Air|-|Côtes du Rhône|-|-|-
+Côtes du Rhône rosé|rosé|Côtes du Rhône|-|-|-
+Rasteau|-|Rasteau|-|-|-
+Côtes du Rhône rouge|rouge|Côtes du Rhône|-|-|-
+Vacqueyras|-|Vacqueyras|-|-|-
+Plan de Dieu|-|Côtes du Rhône Villages Plan de Dieu|-|-|-
+Gigondas|-|Gigondas|-|-|-
+Gigondas Vieilles Vignes|-|Gigondas|-|-|-
+#7
+Château Dudon|-|Sauternes / Barsac|-|-|-
+Gallien de Château Dudon|-|-|-|-|-
+#5
+Crémant d'Alsace Émotion Brut|effervescent|Crémant d'Alsace|-|-|-
+Muscat Sélection Bio|-|Alsace|Muscat|2024|-
+Gewurztraminer Sélection|-|Alsace|Gewurztraminer|2024|-
+#20
+Nos Vieilles Dames|moelleux|Sauternes|Sémillon|-|miel, fraîcheur, précision, longueur
+#23
+Fontissimo|rouge|Médoc|Merlot 50%, Cabernet-Sauvignon 50%|-|cassis, réglisse, grillé
+#29
+Château L'Hermitage Mazeyres|rouge|Pomerol|-|2019|-
+Château Enclos Haut Mazeyres|rouge|Pomerol|-|2018|-
+EHM|rouge|Pomerol|-|2018|-
+L'Héritage 1830|rouge|Pomerol|-|2016|-
+#30
+Château d'Anvichar|rouge|Castillon Côtes de Bordeaux|Merlot 100%|2020|fruits compotés, épices, muscade, vanille
+Cuvée Richard|rouge|Castillon Côtes de Bordeaux|Merlot 100%|2021|floral, pivoine, cerise, framboise
+#31
+Château Grand Beauséjour|rouge|Pomerol|-|2023|-
+Château du Barry|rouge|Saint-Émilion Grand Cru|-|2019|-
+R de Rambaud|rosé|Bordeaux rosé|-|2020|-
+Extrait de Rambaud|rouge|Bordeaux|Merlot|2015|-
+Cuvée Donat|rouge|Saint-Émilion Grand Cru|-|2018|-
+Météorite|rouge|Bordeaux|-|2018|-
+#32
+Château Haut-Maray rouge|rouge|Graves|Merlot 70%, Cabernet-Sauvignon 30%|-|-
+Château Haut-Maray blanc|blanc|Graves|Sauvignon 100%|-|-
+#33
+Fleurie Cuvée Madone|rouge|Fleurie|Gamay|-|petits fruits rouges, framboise, groseille, épices
+Fleurie Cuvée Albert|rouge|Fleurie|Gamay|-|figue, épices, tabac frais
+Chiroubles Anne-Marie & Armand|rouge|Chiroubles|Gamay|-|fruits rouges, violette, iris, pivoine
+#34
+Beaujolais-Villages Rosé Granit|rosé|Beaujolais-Villages|-|-|-
+Chiroubles|rouge|Chiroubles|-|-|-
+Morgon Les Charmes|rouge|Morgon|-|2021|-
+Morgon Côte du Py|rouge|Morgon|-|2021|-
+Beaujolais-Villages blanc|blanc|Beaujolais-Villages|-|-|-
+Beaujolais-Villages blanc fût de chêne|blanc|Beaujolais-Villages|-|-|-
+Brouilly Vieilles Vignes|rouge|Brouilly|-|-|-
+Fleurie|rouge|Fleurie|-|-|-
+Côte de Brouilly|rouge|Côte de Brouilly|-|2021|-
+Morgon Vieilles Vignes fût de chêne|rouge|Morgon|-|-|-
+#38
+Nuits-Saint-Georges Les Argillats blanc|blanc|Nuits-Saint-Georges|-|-|-
+Nuits-Saint-Georges Les Argillats rouge|rouge|Nuits-Saint-Georges|-|-|-
+Coteaux Bourguignons rosé|rosé|Coteaux Bourguignons|-|-|-
+Bourgogne Aligoté|blanc|Bourgogne Aligoté|Aligoté|-|-
+Bourgogne Chardonnay|blanc|Bourgogne|Chardonnay|-|-
+Bourgogne Pinot Noir|rouge|Bourgogne|Pinot noir|-|-
+Hautes-Côtes de Nuits Clos des Dames Huguette|-|Bourgogne Hautes-Côtes de Nuits|-|-|-
+Hautes-Côtes de Nuits Clos de l'Hermitage|-|Bourgogne Hautes-Côtes de Nuits|-|-|-
+Hautes-Côtes de Nuits La Montagne blanc|blanc|Bourgogne Hautes-Côtes de Nuits|-|-|-
+Hautes-Côtes de Nuits La Montagne rouge|rouge|Bourgogne Hautes-Côtes de Nuits|-|-|-
+#42
+Pouilly-Fuissé Anthilde|blanc|Pouilly-Fuissé|Chardonnay|2022|-
+Pouilly-Fuissé Sélection Vieilles Vignes|blanc|Pouilly-Fuissé|Chardonnay|2022|-
+Pouilly-Fuissé 1er Cru Aux Chailloux|blanc|Pouilly-Fuissé 1er Cru|Chardonnay|2022|-
+Pouilly-Fuissé Terroir|blanc|Pouilly-Fuissé|Chardonnay|2022|-
+#47
+Puligny-Montrachet Les Houillères|blanc|Puligny-Montrachet|Chardonnay|2022|-
+Bourgogne blanc Les Houillères|blanc|Bourgogne|Chardonnay|2022|-
+Bourgogne rouge Les Champans|rouge|Bourgogne|Pinot noir|2022|-
+Bourgogne rosé|rosé|Bourgogne|-|2021|-
+Puligny-Montrachet 1er Cru Clos de la Garenne|blanc|Puligny-Montrachet 1er Cru|Chardonnay|-|finesse, minéralité
+Chassagne-Montrachet 1er Cru Morgeot|blanc|Chassagne-Montrachet 1er Cru|Chardonnay|-|richesse, complexité
+#48
+Beaune 1er Cru En l'Orme (monopole)|rouge|Beaune 1er Cru|Pinot noir|-|-
+Beaune 1er Cru Grèves|rouge|Beaune 1er Cru|Pinot noir|-|-
+Beaune 1er Cru Tuvilains|rouge|Beaune 1er Cru|Pinot noir|-|-
+Savigny 1er Cru Les Hauts Marconnets|rouge|Savigny-lès-Beaune 1er Cru|Pinot noir|-|-
+Monthélie 1er Cru|rouge|Monthélie 1er Cru|Pinot noir|-|-
+Pommard|rouge|Pommard|Pinot noir|-|-
+Pommard Les Vignots|rouge|Pommard|Pinot noir|-|-
+Volnay|rouge|Volnay|Pinot noir|-|-
+Monthélie La Combe Danay|rouge|Monthélie|Pinot noir|-|-
+#49
+Pouilly-Fuissé 1er Cru Les Vignes Blanches|blanc|Pouilly-Fuissé 1er Cru|Chardonnay|-|-
+Pouilly-Fuissé 1er Cru Aux Bouthières|blanc|Pouilly-Fuissé 1er Cru|Chardonnay|-|-
+Pouilly-Fuissé 1er Cru Le Clos de Solutré|blanc|Pouilly-Fuissé 1er Cru|Chardonnay|2020|-
+Pouilly-Fuissé 1er Cru Pouilly|blanc|Pouilly-Fuissé 1er Cru|Chardonnay|2020|-
+Saint-Véran|blanc|Saint-Véran|Chardonnay|-|-
+Mâcon-Davayé|blanc|Mâcon-Davayé|Chardonnay|-|-
+#53
+Bourgogne Coulanges-la-Vineuse blanc|blanc|Bourgogne Coulanges-la-Vineuse|Chardonnay|2023|-
+Bourgogne Coulanges-la-Vineuse Cuvée Sélection blanc|blanc|Bourgogne Coulanges-la-Vineuse|Chardonnay|2023|-
+Crémant de Bourgogne Blanc de Blancs Brut|effervescent|Crémant de Bourgogne|Chardonnay|-|-
+Irancy|rouge|Irancy|Pinot noir|2023|-
+Bourgogne Coulanges-la-Vineuse rouge|rouge|Bourgogne Coulanges-la-Vineuse|Pinot noir|2023|-
+#55
+Bourgogne Aligoté|blanc|Bourgogne Aligoté|Aligoté|-|-
+Bourgogne Chardonnay Altis|blanc|Bourgogne|Chardonnay|-|-
+Bourgogne Hautes-Côtes de Beaune blanc|blanc|Bourgogne Hautes-Côtes de Beaune|Chardonnay|-|-
+Santenay En Foulot|blanc|Santenay|Chardonnay|-|-
+Beaune 1er Cru Les Champimonts|blanc|Beaune 1er Cru|Chardonnay|-|-
+Bourgogne Pinot Noir Altis|rouge|Bourgogne|Pinot noir|-|-
+Hautes-Côtes de Beaune Au Paradis|rouge|Bourgogne Hautes-Côtes de Beaune|Pinot noir|-|-
+Bourgogne Cuvée Antique|rouge|Bourgogne|Pinot noir|-|-
+Maranges|rouge|Maranges|Pinot noir|-|-
+Santenay Les Bras|rouge|Santenay|Pinot noir|-|-
+#56
+Bourgogne Chardonnay|blanc|Bourgogne|Chardonnay|2021|-
+Mâcon rosé|rosé|Mâcon|-|2021|-
+Bourgogne Aligoté Cuvée Charly|blanc|Bourgogne Aligoté|Aligoté|2023|-
+Bourgogne rouge|rouge|Bourgogne|Pinot noir|2024|-
+Bulles Blanches|effervescent|-|-|-|-
+Mâcon-Péronne blanc|blanc|Mâcon-Péronne|Chardonnay|2024|-
+Mâcon rouge|rouge|Mâcon|Gamay|2024|-
+Mâcon-Péronne Vieilles Vignes Cuvée Milo|blanc|Mâcon-Péronne|Chardonnay|2023|-
+Bulles rouges Cuvée Noam|effervescent|-|-|-|-
+#64
+Cuvée Initiale|-|Corse|-|-|-
+Cuvée Don Pasquale|-|Corse|-|-|-
+Muscat doux|doux|-|Muscat|-|-
+#70
+Château des Trois Sautets blanc|blanc|Palette|-|2020|pêche, agrumes, fleur blanche, fruits blancs
+Château des Trois Sautets rosé|rosé|Palette|-|2020|fraise, groseille, agrumes
+Château des Trois Sautets rouge|rouge|Palette|-|2020|framboise, fraise, vanille, boisé
+#71
+Rouge Sinaca|rouge|IGP Méditerranée|-|2024|-
+Rouge Arômes|rouge|IGP Méditerranée|-|2024|-
+Rosé Sinaca|rosé|IGP Méditerranée|-|2025|-
+Rosé Arômes|rosé|IGP Méditerranée|-|2024|-
+Blanc Sinaca|blanc|IGP Méditerranée|-|2025|-
+#76
+Cuvée Lidwine|blanc|Côtes de Provence|Rolle (vermentino)|2025|genêt, ananas, pêche blanche, minéral
+Cuvée Georges|rosé|Côtes de Provence Sainte-Victoire|Syrah, Grenache|2025|framboise, pomelo, groseille, salinité
+Cuvée Liam|rosé|Côtes de Provence|Syrah, Grenache, Cinsault|2025|fraise, grenade, citron, fruit de la passion
+Cuvée L'Élégant|rouge|Côtes de Provence|Mourvèdre, Grenache|2025|fraise, olive, vanille, girofle, poivre
+Cuvée Kiara|rouge|Côtes de Provence Sainte-Victoire|Syrah, Grenache, Mourvèdre|2024|pruneau, fleurs séchées, rose, réglisse, chocolat
+#77
+M Prestige de Suriane blanc|blanc|Coteaux d'Aix-en-Provence|-|-|-
+M Prestige de Suriane rouge|rouge|Coteaux d'Aix-en-Provence|-|-|-
+1884 de Suriane rosé|rosé|Coteaux d'Aix-en-Provence|-|-|-
+1884 de Suriane blanc|blanc|Coteaux d'Aix-en-Provence|-|-|-
+1884 de Suriane rouge|rouge|Coteaux d'Aix-en-Provence|-|-|réglisse, garrigue
+Merveilles|-|-|-|-|-
+#78
+L'Échappée Belle|-|Côtes de Provence Sainte-Victoire|-|-|-
+Mas de Cadenet|-|Côtes de Provence Sainte-Victoire|-|-|-
+Grande Garde|-|Côtes de Provence Sainte-Victoire|-|-|-
+Vin cuit de Provence|doux|-|-|-|-
+#81
+César rosé|rosé|-|-|2025|-
+Divina|-|-|-|2025|-
+Jean-Max|-|-|-|2024|-
+#86
+Les Dames Blanches|blanc|-|Chardonnay|-|amande, fleurs blanches
+Viognier|blanc|-|Viognier|2025|-
+#87
+Château Bellevue|moelleux|Côtes de Bergerac|Sauvignon, Muscadelle, Sémillon|2021|-
+Château Pintouquet|blanc|Bergerac sec|Sauvignon|2021|-
+Château Les Merles|rouge|Bergerac|Merlot, Cabernet-Sauvignon|2021|-
+#88
+Tradition|rouge|Gaillac|Braucol 40%, Syrah 40%, Merlot 10%, Duras 10%|-|fruité
+Cuvée Clémence|blanc|Gaillac|Mauzac 70%, Sauvignon 30%|-|-
+#90
+Chant des Vignes|blanc|Jurançon sec|-|-|-
+Geyser|blanc|Jurançon sec|-|-|-
+Quatre Temps|blanc|Jurançon sec|-|2020|-
+La Canopée|blanc|Jurançon sec|-|2020|-
+C de Cauhapé|blanc|Jurançon sec|-|-|-
+Ballet d'Octobre|moelleux|Jurançon|-|-|-
+Boléro|moelleux|Jurançon|-|-|-
+Symphonie de Novembre|moelleux|Jurançon|-|-|-
+Noblesse du Temps|moelleux|Jurançon|-|2018|-
+#91
+Artémis|rouge|Côtes du Roussillon|Syrah 60%, Grenache 20%, Carignan 20%|2016|fruits rouges mûrs, réglisse, épices douces, torréfaction
+Nova Ona|blanc|-|Viognier 60%, Muscat d'Alexandrie 20%, Grenache blanc 20%|2017|fruits blancs, fleurs, fraîcheur
+Nova Ona rosé|rosé|-|Grenache 60%, Mourvèdre 20%, Syrah 10%, Cabernet-Sauvignon 10%|-|fraise, cerise, fruits rouges
+#92
+Léa|-|-|-|-|-
+Nicolas|-|-|-|-|-
+Miraflors|rosé|-|-|-|-
+Cadireta|blanc|-|Chardonnay|-|-
+#103
+Étinc'Ailes|blanc|-|-|2024|fleurs de verger, poire verte
+Mon Père|-|-|-|2023|iris, orchidée, épices, petites baies noires
+#105
+Cuvée Aimé Cazes 1978|doux|Rivesaltes|-|1978|noix verte, orange amère, figue, abricot sec, cannelle
+#111
+Aurélia|-|IGP Saint-Guilhem-le-Désert|-|-|-
+Bastien|-|IGP Saint-Guilhem-le-Désert|-|-|-
+Papé Laurent|-|-|-|-|-
+Édouard|-|-|-|-|-
+Grande Cuvée|-|-|-|-|-
+#112
+Château Catherine de Montgolfier|-|La Clape|-|-|-
+Catherine M.|-|La Clape|-|-|-
+#113
+Margot blanc|blanc|-|-|-|-
+IGP Pays d'Oc blanc bio|blanc|IGP Pays d'Oc|-|-|-
+IGP Pays d'Oc rosé bio|rosé|IGP Pays d'Oc|-|-|-
+IGP Pays d'Oc rouge bio|rouge|IGP Pays d'Oc|-|-|-
+Corbières Margot rouge|rouge|Corbières|-|-|-
+Corbières Cuvée Ermengarde|rouge|Corbières|-|-|-
+Corbières Cuvée Jérémy Banster|rouge|Corbières|-|-|-
+#123
+Vouvray Méthode traditionnelle Brut|effervescent|Vouvray|Chenin|-|-
+Vouvray Méthode traditionnelle Demi-sec|effervescent|Vouvray|Chenin|-|-
+Vouvray sec|blanc|Vouvray|Chenin|2022|-
+Vouvray demi-sec|blanc|Vouvray|Chenin|2023|-
+#127
+Miroir|-|Lirac|-|2019|-
+Quatuor|rouge|Lirac|-|2021|-
+Little Bouchassy rosé|rosé|Vin de France|-|2024|-
+Little Bouchassy rouge|rouge|Vin de France|-|2024|-
+Clin d'Œil|-|-|-|2021|-
+Magnolia|blanc|Lirac|-|2023|-
+#128
+Cornas La Sabarotte|rouge|Cornas|Syrah|2023|-
+Cornas Champelrose|rouge|Cornas|Syrah|2023|-
+Saint-Joseph La Cotte Sud|-|Saint-Joseph|-|2023|-
+Saint-Joseph Les Royes rouge|rouge|Saint-Joseph|Syrah|2023|-
+Saint-Joseph Les Royes blanc|blanc|Saint-Joseph|-|2024|-
+Saint-Joseph Domaine rouge|rouge|Saint-Joseph|Syrah|2025|-
+#131
+Cuvée Maxence|-|Châteauneuf-du-Pape|-|2023|-
+Cuvée Tradition|rouge|Châteauneuf-du-Pape|-|2025|-
+Cuvée Maïlys|-|Cairanne|-|2023|-
+Cuvée Léandre|-|Côtes du Rhône Villages Plan de Dieu|-|2024|-
+Côtes du Rhône Juliette Avril|-|Côtes du Rhône|-|2023|-
+#133
+Au Grès du Vent|blanc|IGP Vaucluse|-|2025|-
+De Mon Plein Grès|rosé|IGP Vaucluse|-|2025|-
+Cuvée MC|blanc|Vin de France|-|2023|-
+Les Peyrières|rouge|Côtes du Rhône Villages|-|2023|-
+#136
+Châteauneuf-du-Pape Cuvée Prestige|-|Châteauneuf-du-Pape|-|-|-
+Rosé La Clairière|rosé|-|-|-|-
+Le Verger blanc|blanc|-|-|-|-
+Côtes du Rhône|-|Côtes du Rhône|-|2024|-
+#137
+Le Pérussier rouge|rouge|Côtes du Rhône|Grenache, Syrah|-|fruits rouges
+Le Pérussier blanc|blanc|Côtes du Rhône|Viognier, Grenache blanc, Marsanne, Bourboulenc|-|fruits exotiques, fleurs blanches
+Le Pérussier rosé|rosé|Côtes du Rhône|Mourvèdre, Grenache, Carignan|-|orange, pamplemousse
+Sainte-Cécile rouge|rouge|Côtes du Rhône Villages Sainte-Cécile|Syrah, Grenache|-|épicé, boisé, fruits noirs
+Visan rouge|rouge|Côtes du Rhône Villages Visan|Grenache, Syrah, Carignan, Mourvèdre|-|fruits noirs, caramel, poivré
+Plan de Dieu rouge|rouge|Côtes du Rhône Villages Plan de Dieu|Grenache, Syrah|-|fruité, caramel
+Cairanne rouge|rouge|Cairanne|Grenache, Syrah|-|fruits rouges, boisé
+Cairanne blanc|blanc|Cairanne|Clairette, Roussanne, Grenache blanc|-|beurré, agrumes, minéralité
+#142
+Clairette de Die Tradition Cuvée Prestige|effervescent|Clairette de Die|Muscat|-|-
+Clairette de Die Cuvée Noble|effervescent|Clairette de Die|-|-|-
+Clairette de Die Tradition 7° Ice|effervescent|Clairette de Die|Muscat|-|-
+Clairette de Die Tradition Jasmée|effervescent|Clairette de Die|Muscat|-|-
+Crémant de Die Brut|effervescent|Crémant de Die|-|-|-
+Crémant de Die To Die For|effervescent|Crémant de Die|-|-|-
+Jasmée rosé méthode ancestrale|effervescent|-|-|-|-
+Pet Nat L'Effronté|effervescent|-|-|-|-
+#150
+Cornas|rouge|Cornas|Syrah|-|-
+Côte-Rôtie|rouge|Côte-Rôtie|Syrah|-|-
+Passion Viognier|blanc|-|Viognier|2019|-
+Condrieu Les Grandes Terrasses|blanc|Condrieu|Viognier|-|-
+Saint-Joseph blanc|blanc|Saint-Joseph|-|2019|-
+Plaisir Syrah|rouge|-|Syrah|2019|-
+Saint-Joseph Les Parcelles|rouge|Saint-Joseph|Syrah|-|-
+#151
+Étincelle nomade|-|IGP Cévennes|-|-|-
+Libra|-|IGP Cévennes|-|-|-
+Étamin|blanc|IGP Cévennes|-|-|-
+Lilith|rouge|IGP Cévennes|-|-|-
+Capella|rouge|IGP Cévennes|-|-|-
+Mintaka|rouge|IGP Cévennes|-|-|-
+#156
+Gigondas 100% Grenache|rouge|Gigondas|Grenache|2023|-
+Gigondas Cuvée Alexandre|rouge|Gigondas|-|2024|-
+Gigondas rouge|rouge|Gigondas|-|2024|-
+Côtes du Rhône rouge|rouge|Côtes du Rhône|-|2024|-
+IGP Méditerranée rosé|rosé|IGP Méditerranée|-|2025|-
+#159
+Viognier|blanc|-|Viognier|2018|-
+Grande Réserve rouge|rouge|-|-|-|-
+Saint-Estève Nature rouge sans sulfites|rouge|-|-|-|-
+Vieilles Vignes Massif d'Uchaux|rouge|Côtes du Rhône Villages Massif d'Uchaux|-|-|-
+#165
+Khikhvi Qvevri|orange|Kakhétie|Khikhvi|2025|-
+Kindzmarauli|rouge demi-doux|Kindzmarauli (Kakhétie)|Saperavi|2023|-
+Kisi|blanc|Kakhétie|Kisi|2023|-
+Kisi Qvevri|orange|Kakhétie|Kisi|2021|-
+#168
+Cabernet Sauvignon Selekcija|rouge|Goriška Brda|Cabernet-Sauvignon|2018|-
+Chardonnay Selekcija|blanc|Goriška Brda|Chardonnay|2021|-
+Merlot Selekcija|rouge|Goriška Brda|Merlot|2020|-
+Rebula Gold|blanc|Goriška Brda|Rebula (ribolla)|2022|-
+#169
+Freamăt Alb|blanc|Corcova|-|2025|-
+Perfect Simplu Syrah|rouge|Corcova|Syrah|2020|-
+Steaua fără Nume|rouge|Corcova|Fetească neagră|2019|-
+#171
+Nero|rouge|Sicilia|Nero d'Avola|-|-
+Sabir|rouge|Sicilia|Nero d'Avola 70%, Nocera 30%|-|-
+Indaco|rouge|Sicilia|Nocera|-|-
+Logos|rouge|Sicilia|Nocera|-|-
+#6
+Edelzwicker|blanc|Alsace|assemblage alsacien|-|fraîcheur, fruité
+Sylvaner|blanc|Alsace|Sylvaner|-|fraîcheur, fruité
+Pinot blanc|blanc|Alsace|Pinot blanc|-|fraîcheur, fruité
+Riesling|blanc|Alsace|Riesling|-|fraîcheur, fruité
+Muscat|blanc|Alsace|Muscat|-|fraîcheur, fruité
+Gewurztraminer|blanc|Alsace|Gewurztraminer|-|fraîcheur, fruité
+Pinot gris|blanc|Alsace|Pinot gris|-|fraîcheur, fruité
+Rosé d'Alsace|rosé|Alsace|Pinot noir|-|fraîcheur, fruité
+Pinot noir|rouge|Alsace|Pinot noir|-|fraîcheur, fruité
+Gewurztraminer Cuvée Loreley|blanc|Alsace|Gewurztraminer|-|puissance aromatique, complexité, finesse
+Gewurztraminer Vieilles Vignes|blanc|Alsace|Gewurztraminer|-|puissance aromatique, complexité, finesse
+#9
+Château Moulin du Comte blanc|blanc|Bordeaux|-|-|-
+Château Moulin du Comte clairet|rosé|Bordeaux clairet|-|-|-
+Château Moulin du Comte rouge|rouge|Bordeaux|-|-|-
+Château La Rose Pipeau|rouge|Fronsac|-|-|-
+Château Laroche Pipeau|rouge|Fronsac|-|-|-
+Château Laroche Pipeau Cuvée Premius|rouge|Fronsac|-|-|-
+Château Laroche Pipeau Quintessence|rouge|Fronsac|-|-|-
+#22
+Bois de Laborde Cuvée Prestige|rouge|Lalande-de-Pomerol|-|-|-
+Bois de Laborde Croix des Hospitaliers|rouge|Lalande-de-Pomerol|-|-|-
+Bois de Laborde Acte Premier|rouge|Lalande-de-Pomerol|-|-|-
+Bois de Laborde Acte Deux|rouge|Lalande-de-Pomerol|Cabernet franc, Cabernet-Sauvignon (majoritaires)|-|-
+Bois de Laborde Acte Trois|rouge|Lalande-de-Pomerol|-|-|-
+Château Histoire de France (Puisseguin)|rouge|Puisseguin-Saint-Émilion|Merlot|-|fruité intense
+Château Histoire de France (Castillon)|rouge|Castillon Côtes de Bordeaux|-|-|minéralité, fruité, rondeur
+Tiffany rosé|rosé|IGP Atlantique|-|-|-
+#25
+Haut-Médoc Vieilles Vignes|rouge|Haut-Médoc|-|2019|-
+Haut-Médoc Vieilles Vignes|rouge|Haut-Médoc|-|2018|-
+Haut-Médoc Vieilles Vignes|rouge|Haut-Médoc|-|2014|-
+#41
+Mâcon-Solutré-Pouilly|blanc|Mâcon-Solutré-Pouilly|Chardonnay|-|agrumes, pamplemousse, citron
+Saint-Véran|blanc|Saint-Véran|Chardonnay|-|pêche, poire, acacia
+Saint-Véran Vieilles Vignes|blanc|Saint-Véran|Chardonnay|-|-
+Pouilly-Fuissé|blanc|Pouilly-Fuissé|Chardonnay|-|noisette, miel, pierre à fusil
+Pouilly-Fuissé Les Chipies|blanc|Pouilly-Fuissé|Chardonnay|-|poire, bonbon arlequin
+Pouilly-Fuissé Cuvée Léon|blanc|Pouilly-Fuissé|Chardonnay|-|-
+Pouilly-Fuissé 1er Cru En Servy|blanc|Pouilly-Fuissé 1er Cru|Chardonnay|-|agrumes, miel
+#54
+Montagny 1er Cru Les Vignes Saint-Pierre|blanc|Montagny 1er Cru|Chardonnay|-|beurré, amande grillée
+Montagny 1er Cru Les Vignes sur le Cloux|blanc|Montagny 1er Cru|Chardonnay|-|beurré, toasté, pain grillé
+Montagny 1er Cru Les Coères|blanc|Montagny 1er Cru|Chardonnay|-|beurré, pêche blanche, agrumes, pierre à fusil
+Montagny 1er Cru Les Chaniots|blanc|Montagny 1er Cru|Chardonnay|-|chèvrefeuille, pamplemousse, beurré
+Bourgogne Aligoté Le Petit Pèlerin|blanc|Bourgogne Aligoté|Aligoté|-|sous-bois, chèvrefeuille, citron
+Côte Chalonnaise (Jully-lès-Buxy)|blanc|Bourgogne Côte Chalonnaise|Chardonnay|-|pêche, poire
+Côte Chalonnaise Clos de Chenôves blanc|blanc|Bourgogne Côte Chalonnaise|Chardonnay|-|pain d'épices, toasté, miel
+Mercurey blanc|blanc|Mercurey|Chardonnay|-|beurré, fruits blancs, léger boisé
+Crémant de Bourgogne Blanc de Noirs|effervescent|Crémant de Bourgogne|Pinot noir|-|fruits, raisin rouge
+Côte Chalonnaise Vieilles Vignes rouge|rouge|Bourgogne Côte Chalonnaise|Pinot noir|-|cassis, épices
+Côte Chalonnaise Clos de Chenôves rouge|rouge|Bourgogne Côte Chalonnaise|Pinot noir|2023|fumé, fruits rouges
+Côte Chalonnaise Clos du Prieuré (monopole)|rouge|Bourgogne Côte Chalonnaise|Pinot noir|2025|petits fruits des bois
+#67
+Clos de Bernardi rosé|rosé|Patrimonio|-|2025|-
+Clos de Bernardi blanc|blanc|Patrimonio|Vermentinu|2025|-
+Rouge Crème de Tête|rouge|Patrimonio|-|2024|-
+Rouge Attilius|rouge|Patrimonio|-|2024|-
+Muscat du Cap Corse|doux|Muscat du Cap Corse|Muscat|2025|-
+#80
+Blanc/Ouest|blanc|Patrimonio|Vermentinu 100%|-|fruit mûr, touche florale, pointe saline
+Rouge/Nord|rouge|Patrimonio|Niellucciu 90%, Grenache 5%, Sciaccarellu 5%|-|fruit mûr, léger épicé, boisé fin
+#85
+Château Les Hauts d'Aglan|rouge|Cahors|Malbec 90%, Merlot 10%|-|généreux, délicat, soyeux
+Cuvée A|rouge|Cahors|Malbec 100%|-|intense, raffiné, complexe
+Château de La Marjolière|rouge|Cahors|Malbec 80%, Merlot 20%|-|gourmand, élégant, fruité
+Rosée d'Aglan|rosé|-|Malbec 100%|-|fraîcheur
+#89
+Jurançon Cuvée Prestige|moelleux|Jurançon|Petit manseng|-|-
+Jurançon sec|blanc|Jurançon sec|Gros manseng|-|fraîcheur, vivacité
+#100
+Sakura rosé|rosé|-|-|-|floral, gourmand
+Villatade V rouge|rouge|-|-|-|fruité
+Côtes Noires|rouge|Minervois|Syrah, Grenache|-|fruits rouges et noirs, épices, touche mentholée
+Villatade V blanc|blanc|-|Vermentino|-|pamplemousse, pêche blanche, fruits exotiques
+Vin de Sophie|rouge|-|Syrah 80%|-|fruité
+Côtes Noires Réserve|rouge|Minervois|-|-|fruits rouges très mûrs
+Villatade V Brut|effervescent|Crémant de Limoux|Chardonnay, Chenin, Pinot noir|-|-
+Villatade V rosé|rosé|Minervois|Syrah, Grenache|-|fruité, gourmand, juteux
+#114
+Tradition|rouge|Cahors|Malbec|-|-
+Tsar Pierre le Grand|rouge|Cahors|Malbec|-|-
+Réserve de l'Aïeul|rouge|Cahors|Malbec|-|-
+Haute Collection|rouge|Cahors|Malbec|-|-
+Domaine de Boissor|rouge|Cahors|Malbec|-|-
+Eugénie La Jolie blanc|blanc|IGP Côtes du Lot|-|-|-
+Eugénie La Jolie rosé|rosé|IGP Côtes du Lot|-|-|-
+Eugénie La Jolie rosé moelleux|moelleux|IGP Côtes du Lot|-|-|-
+Eugénie La Jolie rouge|rouge|IGP Côtes du Lot|-|-|-
+La Soie Fée|rouge|Vin de France|Malbec, Cabernet|-|fruits rouges
+#115
+U Libecciu|blanc|IGP Aude|Vermentinu 80%, Macabeu 20%|2023|fleurs blanches, eucalyptus, nectarine, agrumes
+Fitou Autan en Emporte|rouge|Fitou|Syrah, Grenache, Carignan|2022|violette, fruits noirs, réglisse
+Fitou Comme un Souffle, une Caresse|rouge|Fitou|Grenache 55%, Mourvèdre 40%, Syrah 5%|2022|fleur d'oranger, fruits noirs, épices douces
+La La L'Air rosé|rosé|IGP Aude|Carignan 80%, Syrah 20%|2022|fruits rouges, acacia, pêche blanche, pamplemousse rose
+Fitou Marindes|rouge|Fitou|Carignan 80%, Syrah 20%|2022|fruits noirs, épices, framboise, laurier
+Muscat de Rivesaltes Mistral|doux|Muscat de Rivesaltes|Muscat d'Alexandrie 50%, Muscat petits grains 50%|2022|poire, litchi, fleurs blanches, menthol
+#117
+Coteaux du Layon 1er Cru Chaume|moelleux|Coteaux du Layon 1er Cru Chaume|Chenin|2023|-
+Coteaux du Layon 1er Cru Chaume Prestige|moelleux|Coteaux du Layon 1er Cru Chaume|Chenin|2021|-
+Quarts de Chaume Grand Cru|moelleux|Quarts de Chaume Grand Cru|Chenin|2023|-
+Quarts de Chaume Grand Cru|moelleux|Quarts de Chaume Grand Cru|Chenin|2022|-
+Coteaux du Layon Saint-Aubin|moelleux|Coteaux du Layon|Chenin|2023|-
+Coteaux du Layon Paradis|moelleux|Coteaux du Layon|Chenin|2024|-
+Anjou blanc Chenin sec|blanc|Anjou|Chenin|2025|-
+Anjou Villages|rouge|Anjou Villages|-|2022|-
+#122
+Blanc Fumé de Pouilly|blanc|Pouilly-Fumé|Sauvignon|-|-
+Pouilly-Fumé M|blanc|Pouilly-Fumé|Sauvignon|-|-
+Pouilly-Fumé Les Bois|blanc|Pouilly-Fumé|Sauvignon|-|-
+Pouilly-Fumé Minérale|blanc|Pouilly-Fumé|Sauvignon|-|-
+Majuscule|blanc|Vin de France|Sauvignon|-|-
+Pouilly-sur-Loire|blanc|Pouilly-sur-Loire|Chasselas|-|-
+#132
+La Couronne|rouge|Châteauneuf-du-Pape|-|2020|-
+Blanc Précieux|blanc|Châteauneuf-du-Pape|-|2021|-
+Cuvée Spéciale rouge|rouge|Châteauneuf-du-Pape|-|2019|-
+Réserve du Cygne|rouge|Châteauneuf-du-Pape|-|2019|-
+#152
+Magali rouge|rouge|Côtes du Rhône Villages Rochegude|-|2020|fruité, soyeux
+Magali blanc|blanc|Côtes du Rhône Villages Rochegude|-|2022|floral, élégant
+Magali rosé|rosé|Côtes du Rhône Villages Rochegude|-|2022|frais, friand
+Mon Mignon rouge|rouge|Côtes du Rhône|-|2021|fruité, rond
+Mon Mignon rosé|rosé|Côtes du Rhône|-|2022|frais, fringant
+Vieilles Vignes rouge|rouge|Côtes du Rhône Villages Rochegude|-|2020|fruité, épicé, tanins soyeux
+Le Sourire de Jeanne|rouge|Côtes du Rhône Villages Rochegude|-|2020|fruité, épicé, tanins soyeux
+Grès des Garrigues|rouge|Côtes du Rhône Villages Rochegude|-|2020|fruité, épicé, tanins soyeux
+#158
+Phénix blanc|blanc|IGP Ardèche|-|2025|-
+Viognier|blanc|IGP Ardèche|Viognier|2025|-
+Douceur de Chardonnay|blanc|IGP Ardèche|Chardonnay|2025|-
+Zest rosé|rosé|IGP Ardèche|-|2025|-
+Rosé Caladoc|rosé|IGP Ardèche|Caladoc|2025|-
+Gamay|rouge|IGP Ardèche|Gamay|2025|-
+Cabernet-Sauvignon|rouge|IGP Ardèche|Cabernet-Sauvignon|2022|-
+Syrah|rouge|IGP Ardèche|Syrah|2024|-
+#164
+Saperavi Tavankari|rouge|Kakhétie|Saperavi|2021|-
+Mtsvivani Kakhuri|blanc|Kakhétie|Mtsvivani|2020|herbe coupée, figue séchée, fruits secs
+Rkatsiteli Orgo|orange|Kakhétie|Rkatsiteli|2019|-
+Krakhuna Anemo|blanc|Iméréthie|Krakhuna|2019|caramel, coing, abricot, herbe sèche
+Orgo Cuvée blanc|blanc|Kakhétie|Mtsvane, Kisi, Rkatsiteli|-|-
+Mtsvane Nareklishvili|orange|Kakhétie|Mtsvane|2020|fruits secs, figue séchée
+Saperavi Vinoterra|rouge|Kakhétie|Saperavi|2020|-
+Kisi Vazisubani|blanc|Kakhétie|Kisi|2018|abricot, fruits secs, noix grillées
+Khikhvi Winiveria|blanc|Kakhétie|Khikhvi|2018|fruits exotiques, agrumes
+Mukuzani Vazisubani|rouge|Mukuzani|Saperavi|2020|mûre, merise, chêne épicé, vanille
+Saperavi Réserve|rouge|Kakhétie|Saperavi|2007|sous-bois, épices, réglisse
+Kvareli Special Reserve|rouge|Kvareli|Saperavi|2016|cerise mûre, chocolat noir, pruneau, poivre
+#170
+Moscato d'Asti Sorì Eroici|effervescent|Moscato d'Asti|Moscato|2025|-
+Langhe Favorita|blanc|Langhe|Favorita|2024|-
+Langhe Chardonnay|blanc|Langhe|Chardonnay|2023|-
+Dolcetto d'Alba|rouge|Dolcetto d'Alba|Dolcetto|2024|-
+Barbera d'Asti|rouge|Barbera d'Asti|Barbera|2022|-
+Barbera d'Alba Superiore|rouge|Barbera d'Alba|Barbera|2023|-
+Langhe Nebbiolo|rouge|Langhe|Nebbiolo|2021|-
+Tresette Metodo Classico|effervescent|-|-|-|-
+Freisa d'Asti|rouge|Freisa d'Asti|Freisa|2022|-
+Nizza|rouge|Nizza|Barbera|2022|-

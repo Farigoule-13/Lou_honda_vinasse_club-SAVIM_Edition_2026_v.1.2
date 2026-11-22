@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#13294b">
+  <title>LHVC · Résultats du SAVIM</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { padding-bottom: 1rem; }
+    .deck { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; }
+    .slide { background: linear-gradient(160deg, var(--wine), #1f3f6b); color: #fff; border-radius: 22px; padding: 1.3rem 1.1rem; box-shadow: 0 8px 30px rgba(0,0,0,.2); animation: pop .3s ease-out; }
+    @keyframes pop { from { transform: scale(.96); opacity: .3; } to { transform: none; opacity: 1; } }
+    .slide h2 { color: #fff; font-size: 1.4rem; text-align: center; margin: 0 0 1rem; }
+    .slide p { text-align: center; color: #dfe9f7; }
+    .slide.section { background: linear-gradient(160deg, var(--red), #8d0b21); }
+    .slide.podium { background: linear-gradient(160deg, #8a6a12, var(--gold)); color: var(--wine-dark); }
+    .slide.podium h2 { color: var(--wine-dark); }
+    .rk { display: flex; align-items: center; gap: .7rem; padding: .55rem .2rem; border-bottom: 1px solid rgba(255,255,255,.15); opacity: 0; animation: in .4s forwards; }
+    .rk:nth-child(1) { animation-delay: .9s; } .rk:nth-child(2) { animation-delay: .6s; } .rk:nth-child(3) { animation-delay: .3s; }
+    @keyframes in { to { opacity: 1; } }
+    .rk .m { font-size: 1.6rem; width: 2.2rem; text-align: center; }
+    .rk .tt { flex: 1; min-width: 0; } .rk .tt b { display: block; } .rk .tt small { opacity: .8; }
+    .rk .vv { font-weight: 800; white-space: nowrap; }
+    .nav { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: .5rem; margin-top: .8rem; align-items: center; }
+    .nav .btn { margin: 0; }
+    .count { text-align: center; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="topbar"><h1><img src="img/logo.jpg" alt="" class="logo-mini">🏆 Résultats du SAVIM</h1></header>
+  <main id="app"></main>
+  <div class="toast" id="toast"></div>
+  <script src="data/fiches.js"></script>
+  <script src="data/exposants.js"></script>
+  <script src="rankings.js"></script>
+  <script src="vendor/sha256.js"></script>
+  <script>
+  /* Page de l'hôte : récupère les notes reçues par son serveur, importe les fichiers
+     envoyés par message, puis déroule le palmarès diapo par diapo.
+     Marche aussi SANS serveur (version en ligne) : on importe les fichiers de chacun. */
+  (() => {
+    const { DB, Fiches, Rankings } = window.LHVC_SALON;
+    const $ = s => document.querySelector(s);
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const TK = 'lhvc_salon_admin';
+    const TEST = new URLSearchParams(location.search).has('test');
+    let token = sessionStorage.getItem(TK) || '';
+    let server = location.protocol === 'http:';          // servi par le serveur de l'hôte ?
+    let local = { members: {}, votes: {}, wines: {}, communes: {} };   // données importées sans serveur
+    let data = null, slides = [], i = 0;
+    const toast = (m, k = '') => { const t = $('#toast'); t.textContent = m; t.className = `toast show ${k}`; setTimeout(() => t.className = 'toast', 2800); };
+    const api = async (method, url, body) => {
+      const r = await fetch(url, { method, headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) }, body: body ? JSON.stringify(body) : undefined });
+      return r.json();
+    };
+
+    function mergeLocal(p) {
+      if (p.app !== 'lhvc-salon' || !p.member?.id) throw new Error('fichier non reconnu');
+      if (!p.member.secret || window.LHVC_SHA.memberIdFromSecret(p.member.secret) !== p.member.id) throw new Error('clé du dégustateur invalide');
+      local.members[p.member.id] = { name: p.member.name, pref: p.member.pref || '' };
+      (p.votes || []).forEach(v => { if (v.by === p.member.id && (!local.votes[v.id] || (v.upd || 0) > (local.votes[v.id].upd || 0))) local.votes[v.id] = v; });
+      (p.wines || []).forEach(w => { local.wines[w.id] = local.wines[w.id] || w; });
+      (p.communes || []).forEach(c => { local.communes[c.id] = local.communes[c.id] || c; });
+    }
+
+    let serverAlert = null;
+    async function backup() {
+      const r = await fetch('/api/salon/backup', { headers: { Authorization: `Bearer ${token}` } });
+      if (!r.ok) return toast('Sauvegarde impossible', 'err');
+      const a = document.createElement('a'); a.href = URL.createObjectURL(await r.blob());
+      a.download = (r.headers.get('content-disposition') || '').match(/filename="([^"]+)"/)?.[1] || 'sauvegarde-salon.json';
+      document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    }
+    async function restore(f) {
+      if (!f) return;
+      let full; try { full = JSON.parse(await f.text()); } catch { return toast('Fichier illisible', 'err'); }
+      if (full.app !== 'lhvc-salon-sauvegarde') return toast('Ce n\'est pas une sauvegarde complète (pour le fichier d\'un dégustateur : 📎 Importer)', 'err');
+      if (!confirm(`Remplacer les notes du serveur par celles de cette sauvegarde (${Object.keys(full.votes || {}).length} notes) ?`)) return;
+      const d = await api('POST', '/api/salon/restore', { sauvegarde: full, pin: $('#spin')?.value });
+      toast(d.ok ? `♻️ Restauré : ${d.notes} notes de ${d.membres} dégustateurs` : d.error, d.ok ? 'ok' : 'err'); load();
+    }
+    function home(msg = '') {
+      const alertHtml = serverAlert ? `<div class="notice ${serverAlert.level === 'error' ? 'err' : ''}">${serverAlert.level === 'error' ? '❌' : '⚠️'} ${esc(serverAlert.message)}
+        <button class="btn small ghost" id="alertOk" style="margin-top:.4rem">J'ai compris</button></div>` : '';
+      const n = data ? Object.values(data.votes).filter(v => !v.deleted).length : 0;
+      const people = data ? Object.values(data.members) : [];
+      $('#app').innerHTML = `${TEST ? '<p class="notice">🧪 <strong>Mode test</strong> : ces résultats viennent des notes d\'essai.</p>' : ''}${msg}
+        ${server && !token ? `<div class="card"><h2>🔐 Code animateur</h2><p class="hint">Il est affiché sur l\x27écran de l\x27hôte (sur le téléphone du serveur) et dans la fenêtre Termux / la fenêtre noire.</p>
+          <input id="pin" type="password" inputmode="numeric" maxlength="8" placeholder="••••"><button class="btn" id="login">Entrer</button></div>` : ''}
+        <div class="card"><h2>📥 Les notes reçues</h2>
+          ${data ? `<p><strong>${n}</strong> notes de <strong>${people.length}</strong> dégustateur${people.length > 1 ? 's' : ''} :
+            ${people.map(m => esc(m.name)).join(', ') || '—'}</p>` : '<p class="hint">Connecte-toi pour voir les notes reçues.</p>'}
+          <p class="hint">Quelqu'un t'a envoyé son fichier par message ? Importe-le ici (plusieurs à la fois, c'est possible). Un vote déjà reçu n'est jamais compté deux fois.</p>
+          <label class="btn ghost" style="cursor:pointer">📎 Importer des fichiers<input type="file" id="files" multiple accept=".json,application/json,text/plain" hidden></label>
+          <details class="more"><summary>📋 Coller un texte reçu (message WhatsApp de secours)</summary><textarea id="paste" rows="4" placeholder='{"app":"lhvc-salon",…}'></textarea>
+            <button class="btn ghost" id="pasteGo">Importer le texte</button></details>
+          ${data ? '<button class="btn ghost" id="refresh">🔄 Actualiser</button>' : ''}
+        </div>
+        ${data && n ? `<button class="btn gold" id="start" style="font-size:1.25rem">🏆 Lancer la révélation</button>
+          <button class="btn ghost" id="all">📜 Tout voir d'un coup</button>` : ''}
+        ${alertHtml}
+        ${server && token ? `<details class="more"><summary>💾 Sauvegarde complète / restauration</summary>
+          <p class="hint">Le serveur fait déjà une copie automatique toutes les 10 minutes (dossier « sauvegardes »). Tu peux aussi garder un fichier sur toi.</p>
+          <button class="btn ghost" id="backup">💾 Télécharger une sauvegarde complète</button>
+          <p class="hint" style="margin-top:.8rem">Restaurer remplace toutes les notes du serveur par celles du fichier (l'état actuel est d'abord copié).</p>
+          ${TEST ? '' : '<input id="spin" type="password" inputmode="numeric" placeholder="Code animateur">'}
+          <label class="btn ghost" style="cursor:pointer">♻️ Restaurer une sauvegarde<input type="file" id="restore" accept=".json,application/json" hidden></label></details>` : ''}
+        ${server && token ? `<details class="more"><summary>🧹 Remettre à zéro (nouveau salon)</summary><p class="hint">Efface toutes les notes reçues par le serveur. Les téléphones gardent les leurs.</p>
+          ${TEST ? '' : '<input id="rpin" type="password" inputmode="numeric" placeholder="Code animateur">'}<button class="btn red" id="reset">Tout effacer</button></details>` : ''}`;
+      $('#login')?.addEventListener('click', login);
+      $('#files').addEventListener('change', e => importFiles([...e.target.files]));
+      $('#pasteGo').addEventListener('click', () => importTexts([$('#paste').value]));
+      $('#refresh')?.addEventListener('click', load);
+      $('#start')?.addEventListener('click', () => { i = 0; show(); });
+      $('#all')?.addEventListener('click', showAll);
+      $('#reset')?.addEventListener('click', reset);
+      $('#backup')?.addEventListener('click', backup);
+      $('#restore')?.addEventListener('change', e => restore(e.target.files[0]));
+      $('#alertOk')?.addEventListener('click', async () => { await api('POST', '/api/host/alert/ok', {}); serverAlert = null; load(); });
+    }
+
+    async function login() {
+      try {
+        const d = await api('POST', '/api/host/login', { pin: $('#pin').value });
+        if (!d.ok) return toast(d.error || 'Code refusé', 'err');
+        token = d.token; sessionStorage.setItem(TK, token); load();
+      } catch { toast('Serveur injoignable', 'err'); }
+    }
+    async function load() {
+      if (server) { try { const r = await fetch('/api/salon/ping', { cache: 'no-store' }); server = (await r.json()).salon === true; } catch { server = false; } }
+      if (!server) { data = local; compute(); return home(Object.keys(local.members).length ? '' : '<p class="notice">📎 Version sans serveur : importe ici les fichiers de notes envoyés par chacun.</p>'); }
+      if (!token) return home();
+      try {
+        const d = await api('GET', '/api/salon/data');
+        if (!d.ok) { if (/hôte|animateur|requis/i.test(d.error || '')) { token = ''; sessionStorage.removeItem(TK); } return home(`<p class="notice err">${esc(d.error)}</p>`); }
+        data = d.data; serverAlert = d.alert || null; compute(); home();
+      } catch { server = false; data = local; home('<p class="notice">📡 Pas de serveur ici : importe les fichiers des copains.</p>'); }
+    }
+    async function importTexts(texts) {
+      const payloads = [];
+      for (const t of texts) {
+        try {
+          // message de secours (WhatsApp) : « … LHVC1:<données> » ; sinon le fichier JSON tel quel
+          const m = String(t).match(/LHVC1:([A-Za-z0-9_-]+)/);
+          if (m) { const b = m[1].replace(/-/g, '+').replace(/_/g, '/'); payloads.push(JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(b), c => c.charCodeAt(0))))); }
+          else payloads.push(JSON.parse(t));
+        } catch { toast('Un texte ou un fichier est illisible (message incomplet ?)', 'err'); }
+      }
+      if (!payloads.length) return;
+      if (server && token) {
+        const d = await api('POST', '/api/salon/import', { payloads });
+        const okN = (d.results || []).filter(r => r.ok), ko = (d.results || []).filter(r => !r.ok);
+        toast(`${okN.length ? `✅ ${okN.map(r => `${r.name} (+${r.added})`).join(', ')}` : 'Rien de neuf'}${ko.length ? ` · ❌ refusé : ${ko.map(r => `${r.name || '?'} (${r.error})`).join(', ')}` : ''}`, ko.length ? 'err' : 'ok');
+        return load();
+      }
+      let n = 0; payloads.forEach(p => { try { mergeLocal(p); n++; } catch (e) { toast(`Fichier refusé : ${e.message}`, 'err'); } });
+      toast(`✅ ${n} fichier(s) importé(s)`, 'ok'); data = local; compute(); home();
+    }
+    async function importFiles(files) { importTexts(await Promise.all(files.map(f => f.text()))); }
+    async function reset() {
+      if (!confirm('Effacer toutes les notes reçues ?')) return;
+      const d = await api('POST', '/api/salon/reset', { pin: $('#rpin')?.value });
+      toast(d.ok ? 'Remis à zéro' : d.error, d.ok ? 'ok' : 'err'); load();
+    }
+
+    function compute() {
+      const R = Rankings.compute(data, { DB, Fiches });
+      slides = Rankings.slides(R, Fiches);
+    }
+    const medal = k => ['🥇', '🥈', '🥉', '4', '5'][k] || '';
+    const slideHtml = s => `<div class="slide ${s.kind || ''}"><h2>${esc(s.title)}</h2>${s.text ? `<p>${esc(s.text)}</p>` : ''}
+      ${(s.rows || []).map((r, k) => `<div class="rk" style="${s.kind === 'podium' ? '' : 'animation-delay:0s'}"><span class="m">${s.kind === 'profil' ? '•' : medal(k)}</span>
+        <span class="tt"><b>${r.couleur ? '' : ''}${esc(r.title)}</b>${r.sub ? `<small>${esc(r.sub)}</small>` : ''}</span>
+        <span class="vv">${esc(r.val || '')}${r.n ? ` <small>(${r.n})</small>` : ''}</span></div>`).join('')}</div>`;
+    function show() {
+      const s = slides[i];
+      $('#app').innerHTML = `<div class="deck">${slideHtml(s)}</div>
+        <div class="nav"><button class="btn ghost" id="prev" ${i === 0 ? 'disabled' : ''}>◀</button>
+          <button class="btn" id="next">${i === slides.length - 1 ? '🏁 Fin' : 'Suivant ▶'}</button><button class="btn ghost" id="quit">✕</button></div>
+        <p class="count">${i + 1} / ${slides.length} · ${'(n) = nombre de notes'}</p>`;
+      $('#prev').onclick = () => { i = Math.max(0, i - 1); show(); };
+      $('#next').onclick = () => { if (i < slides.length - 1) { i++; show(); } else home(); };
+      $('#quit').onclick = () => home();
+    }
+    function showAll() {
+      $('#app').innerHTML = `<button class="btn ghost" id="quit">↩ Retour</button>${slides.map(s => `<div style="margin:.8rem 0">${slideHtml(s)}</div>`).join('')}`;
+      document.querySelectorAll('.rk').forEach(r => { r.style.opacity = 1; r.style.animation = 'none'; });
+      $('#quit').onclick = () => home();
+    }
+    let x0 = null;
+    document.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', e => {
+      if (x0 === null || !$('.deck')) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 60) (dx < 0 ? $('#next') : $('#prev'))?.click();
+    });
+    load();
+  })();
+  </script>
+</body>
+</html>

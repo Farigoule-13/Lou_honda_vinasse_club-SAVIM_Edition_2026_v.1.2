@@ -1,0 +1,58 @@
+{
+  "source": "https://www.salons-savim.fr/exposants/vins-champagnes/",
+  "dateVerification": "2026-11-21",
+  "archiveSourceSHA256": "7443e4a8932d5fa06b6f7b2c9670b6153c59e75902125273997c10e6ec35c8d9",
+  "exposantsAvant": 173,
+  "exposantsApres": 173,
+  "cuvéesAvant": 400,
+  "cuvéesAjoutées": 65,
+  "cuvéesApres": 465,
+  "exposantsAyantAuMoinsUneCuvéeAvant": 74,
+  "exposantsAyantAuMoinsUneCuvéeApres": 77,
+  "codesPostauxSourcesRenseignés": 161,
+  "présenceDéclaréeSourcesRenseignée": 165,
+  "labelsAffichésSource": 78,
+  "modificationsChampsHistorique": [
+    {
+      "id": "domaine-de-la-citadelle",
+      "champ": "site",
+      "avant": "",
+      "apres": "https://www.domaine-citadelle.com"
+    }
+  ],
+  "écartsLabelsNonCorrigés": [
+    {
+      "exposant": "Domaine Justine Vigne",
+      "labelsBase": [
+        "AB"
+      ],
+      "labelsSourceSavim": [
+        "AB",
+        "Nature"
+      ],
+      "statut": "écart documentaire à investiguer, pas correction automatique"
+    },
+    {
+      "exposant": "Frères Roye",
+      "labelsBase": [
+        "AB"
+      ],
+      "labelsSourceSavim": [
+        "AB",
+        "Nature"
+      ],
+      "statut": "écart documentaire à investiguer, pas correction automatique"
+    }
+  ],
+  "exposantsSourcesDoublon": [
+    "Domaine Courlovin"
+  ],
+  "exposantsNonChampagneDansListeOfficielle": 173,
+  "limites": [
+    "Liste SAVIM qualifiée de non exhaustive",
+    "Mention d’une cuvée dans un catalogue producteur ne prouve pas qu’elle sera sur le stand",
+    "Ne certifie pas indépendamment les 400 cuvées de l’archive initiale",
+    "Page Domaine Roustan disponible via indexation, accès direct temporairement en maintenance",
+    "Pour Domaine Courlovin deux adresses officielles contradictoires, aucune arbitrairement retenue"
+  ]
+}

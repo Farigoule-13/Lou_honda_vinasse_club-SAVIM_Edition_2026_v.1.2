@@ -1,0 +1,12 @@
+{
+  "name": "lhvc-savim-edition",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lou Honda Vinasse Club · SAVIM Edition : noter les vins du salon des vignerons, même sans réseau",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node run-tests.js",
+    "mode-test": "node server.js --test --open"
+  },
+  "engines": { "node": ">=18" }
+}
